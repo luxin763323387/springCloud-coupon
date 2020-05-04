@@ -7,23 +7,26 @@ import java.util.Objects;
 import java.util.stream.Stream;
 
 /**
- * 分发目标
+ * 有效期类型
  * @author StevenLu
- * @date 2020-05-04 12:42
+ * @date 2020-05-04 13:25
  */
 @Getter
 @AllArgsConstructor
-public enum  DistributeTargetEnum {
+public enum PeriodTypeEnum {
 
-    SINGLE(1,"单用户"),
-    MULTI(2,"多用户");
+    /**固定类型*/
+    REGULAR(1,"固定的(固定日期)"),
 
-    /**分发目标编码*/
+    /**变动类型*/
+    SHIFT(2,"变动的(以领取之日开始计算)");
+
+    /**券有效期code*/
     private Integer code;
-    /**分发目标描述*/
+    /**券描述*/
     private String desc;
 
-    public static DistributeTargetEnum of(Integer code) {
+    public static PeriodTypeEnum of(Integer code) {
         Objects.requireNonNull(code);
         return Stream.of(values())
                 .filter(e -> e.code.equals(code))
