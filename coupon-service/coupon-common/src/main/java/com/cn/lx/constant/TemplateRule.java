@@ -16,7 +16,7 @@ import org.apache.commons.lang3.StringUtils;
 public class TemplateRule {
 
     /** 优惠券过期规则 */
-    private Exception exception;
+    private Expiration expiration;
 
     /** 折扣 */
     private Discount discount;
@@ -34,6 +34,13 @@ public class TemplateRule {
      *
      * */
     private String weight;
+
+    public boolean validate(){
+        return expiration.validate() && discount.validate()
+                && limitation > 0 && usage.validate()
+                && StringUtils.isNotEmpty(weight);
+    }
+
 
     /**
      * 有效期规则
