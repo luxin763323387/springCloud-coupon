@@ -1,5 +1,6 @@
-package com.cn.lx.constant;
+package com.cn.lx.vo;
 
+import com.cn.lx.constant.PeriodTypeEnum;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

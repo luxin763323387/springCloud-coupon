@@ -3,7 +3,6 @@ package com.cn.lx.vo;
 import com.cn.lx.constant.CouponCategoryEnum;
 import com.cn.lx.constant.DistributeTargetEnum;
 import com.cn.lx.constant.ProductLineEnum;
-import com.cn.lx.constant.TemplateRule;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

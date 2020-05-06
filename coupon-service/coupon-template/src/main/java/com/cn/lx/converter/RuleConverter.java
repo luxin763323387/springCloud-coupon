@@ -1,7 +1,7 @@
 package com.cn.lx.converter;
 
 import com.alibaba.fastjson.JSON;
-import com.cn.lx.constant.TemplateRule;
+import com.cn.lx.vo.TemplateRule;
 
 import javax.persistence.AttributeConverter;
 import javax.persistence.Converter;
